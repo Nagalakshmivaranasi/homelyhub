@@ -107,3 +107,6 @@ export default App;
 //AxiosInstance
 //slice
 // Action
+
+// our application => GroQ api => AI Model => Api response => frontend
+//Groq is a platform that helps our application to communicate with AI model and get the response from AI model and send it to frontend

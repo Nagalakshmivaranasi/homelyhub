@@ -6,6 +6,7 @@ import connectDb from './utils/db.js';
 import {router} from "./routes/userRoutes.js";
 import { propertyRouter } from './routes/propertyRouter.js';
 import { bookingRouter } from './routes/bookingRouter.js';
+import { tripRouter } from './routes/tripRouter.js';
 
 // dotenv.config({path: './config/config.env'});
 dotenv.config();
@@ -31,6 +32,7 @@ app.get('/', (req, res) => {
 app.use("/api/v1/rent/user", router);
 app.use("/api/v1/rent", propertyRouter);
 app.use("/api/v1/rent/user/booking", bookingRouter);
+app.use("/api/v1/rent/trip", tripRouter);
 
 const startServer = async () => {
     try {

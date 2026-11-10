@@ -6,7 +6,6 @@ import LoadingSpinner from "../LoadingSpinner";
 import {fetchBookingDetails} from "../../store/Booking/booking-action";
 import {useDispatch, useSelector} from "react-redux";
 
-
 const BookingDetails = () => {
   const { bookingId } = useParams();
 
