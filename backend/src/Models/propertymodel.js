@@ -32,7 +32,7 @@ const propertySchema = new mongoose.Schema({
         name: {
             type: String,
             required: true,
-            enum: ["wifi", "kitchen", "AC", "Washing machine", "TV", "pool", "free parking"]
+            enum: ["Wifi", "Kitchen", "Ac", "Washing Machine", "Tv", "Pool", "Free Parking"]
         },
         icon: {
             type: String,
@@ -97,14 +97,12 @@ const propertySchema = new mongoose.Schema({
 
 })
 
-propertySchema.pre("save", function (next) {
+propertySchema.pre("save", function () {
     this.slug = slugify(this.propertyName, { lower: true });
-    next();
 })
 
-propertySchema.pre("save", function (next) {
+propertySchema.pre("save", function () {
     this.address.city = this.address.city.toLowerCase().replaceAll(" ", "");
-    next();
 })
 
 const Property = mongoose.model("Property", propertySchema);
