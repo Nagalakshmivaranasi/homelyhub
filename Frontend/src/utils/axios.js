@@ -5,7 +5,7 @@ import qs from 'qs'; // converts javascript object into a url query string
 //{skill:{'js', 'react'}} => skill=js&skill=react
 
 export const axiosInstance = axios.create({
-    baseURL: import.meta.env.VIT_API_BASE_URL || '/api',
+    baseURL: import.meta.env.VITE_API_BASE_URL || '/api',
     withCredentials: true,
     paramsSerializer: params => qs.stringify(params, { arrayFormat: 'repeat' }),
 })
